@@ -1,4 +1,4 @@
-import tkinter
+from future.moves import tkinter 
 import math
 def click(val):
     e = entry.get()
@@ -77,20 +77,19 @@ button_list = ["C", "CE", "√", "+", "π", "cos0", "tan0", "sin0",
                "6", "*", chr(8731), "x\u02b8", "x\u00B3", "x\u0082", "7",
                "8", "9", chr(247), "In", "deg", "rad", "e", "0", ".", "%",
                "=", "log10", "(",")", "x!"]
-
 r = 1
 c = 0
 
 for i in button_list:
     
     button = tkinter.Button(root, width=5, height=2, bd=2, text=i,
-                            bg="black", fg="white",font=("arial", 18, "bold"),
-                            command=lambda button=i: click(button))
+            bg="black", fg="white",font=("arial", 18, "bold"),
+            command=lambda button=i: click(button))
     button.grid(row=r, column=c, pady=1)
     c += 1
     if c > 7:
         r += 1
         c = 0
         
-
+        
 root.mainloop()
