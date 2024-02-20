@@ -65,7 +65,7 @@ def click(val):
         pass
 root = tkinter.Tk()
 root.title("Scientific Calculator")
-root.geometry("600x486+100+100")
+root.geometry("680x464+100+100")
 root.config(bg="black")
 
 entry = tkinter.Entry(root, font=("arial", 20, "bold"),
